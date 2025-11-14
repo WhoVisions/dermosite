@@ -5,7 +5,7 @@ interface NavigationProps {
 }
 
 interface NavLinkProps {
-  href: string;
+  href: '/' | '/about';
   children: React.ReactNode;
 }
 

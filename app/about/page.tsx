@@ -1,15 +1,6 @@
 import Link from 'next/link';
 
-interface PageProps {
-  params: Promise<Record<string, string>>;
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}
-
-const AboutPage = async ({ params, searchParams }: PageProps) => {
-  // In Next.js 16, params and searchParams must be awaited
-  const resolvedParams = await params;
-  const resolvedSearchParams = await searchParams;
-
+const AboutPage = () => {
   return (
     <main className="flex min-h-screen flex-col items-center p-6 md:p-24">
       <div className="max-w-4xl w-full space-y-8">

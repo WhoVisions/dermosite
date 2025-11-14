@@ -1,15 +1,12 @@
+'use client';
+
 import Link from 'next/link';
-import { Counter, Button } from '@/components';
+import dynamic from 'next/dynamic';
 
-interface PageProps {
-  params: Promise<Record<string, string>>;
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}
+const Counter = dynamic(() => import('@/components/counter').then(mod => ({ default: mod.Counter })), { ssr: false });
+const Button = dynamic(() => import('@/components/button').then(mod => ({ default: mod.Button })), { ssr: false });
 
-const DemoPage = async ({ searchParams }: PageProps) => {
-  // In Next.js 16, searchParams must be awaited
-  const resolvedSearchParams = await searchParams;
-
+const DemoPage = () => {
   return (
     <main className="flex min-h-screen flex-col items-center p-6 md:p-24">
       <div className="max-w-4xl w-full space-y-8">
