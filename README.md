@@ -288,3 +288,16 @@ Install the one(s) you need based on your project requirements.
 ## License
 
 This project is open source and available under the MIT License.
+
+<!-- nougen:fleet-role:begin (generated from NouGenRelay fleet/manifest.json; edit the manifest, not this block) -->
+## Fleet role
+
+| | |
+|---|---|
+| Role | dermosite (TypeScript) |
+| Kind | genesis_domain |
+| Status | canonical |
+| Canonical for | dermosite |
+| Visibility | public |
+
+<!-- nougen:fleet-role:end -->
